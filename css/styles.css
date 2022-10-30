@@ -36,5 +36,10 @@ p, ul {
 }
 
 ul {
+  display: flex;
   list-style-type: none;
+}
+
+li {
+  flex: 1 1 auto;
 }
