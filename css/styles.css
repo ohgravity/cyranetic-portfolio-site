@@ -21,6 +21,22 @@ body {
   margin-bottom: 20px;
 }
 
+.header-container {
+  display: flex;
+}
+
+.name {
+  flex: 3 1 auto;
+  /* margin-right: auto; */
+}
+
+.navigation {
+  display: flex;
+  flex: 1 1 auto;
+  /* margin-left: auto; */
+  justify-content: space-between;
+}
+
 h1 {
   font-size: 40px;
   margin-bottom: 40px;
@@ -31,15 +47,19 @@ h2 {
   margin-top: 20px;
 }
 
+h3 {
+  font-size: 30px;
+}
+
 p, ul {
   font-size: 20px;
 }
 
-ul {
-  display: flex;
-  list-style-type: none;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-li {
-  flex: 1 1 auto;
+#work, #about, #contact {
+  margin: 0 10px;
 }
