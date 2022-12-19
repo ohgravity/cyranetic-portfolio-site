@@ -22,11 +22,27 @@ body {
 
 .header-container {
   display: flex;
-  margin: 20px 100px;
+  padding: 20px 100px;
+}
+
+#work-header {
+  background-color: rgb(247, 124, 224);
+}
+
+#about-header {
+  background-color: rgb(41, 152, 249);
+}
+
+#blog-header {
+  background-color: rgb(95, 255, 106);
+}
+
+#contact-header {
+  background-color: #ffc53d;
 }
 
 .name {
-  flex: 3 1 auto;
+  flex: 2 1 auto;
   /* margin-right: auto; */
 }
 
@@ -58,7 +74,7 @@ a {
   color: black;
 }
 
-#work, #about, #contact {
+#work, #about, #contact, #blog {
   margin: 0 10px;
 }
 
