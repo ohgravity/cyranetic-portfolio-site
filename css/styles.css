@@ -114,3 +114,19 @@ ul {
   padding-top: 20px;
   padding-bottom: 100px;
 }
+
+#about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#about-container img {
+  width: 15%;
+}
+
+#about-content {
+  width: 80%;
+  text-align: left;
+}
