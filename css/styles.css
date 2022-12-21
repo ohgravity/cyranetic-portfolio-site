@@ -83,6 +83,29 @@ a {
   margin: 50px 200px;
 }
 
+.blog-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.blog-article {
+  width: 60%;
+}
+
+.blog-article-titles {
+  width: 30%;
+  text-align: right;
+}
+
+#blog-titles-heading {
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
 .section-title {
   padding-bottom: 20px;
 }

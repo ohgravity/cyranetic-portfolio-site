@@ -17,14 +17,80 @@
   </div>
 </div>
 <div class="page-content">
-  <h2 class="section-title">Artists Have Unique Video Hosting Needs</h2>
-  <p>When LFS is recommended online, it often states that if you want to back up large files with Git, you should use LFS.
-  It neglects to say that there are times when it doesn't make sense to have large files in your project at all, and it
-  neglects to say how difficult this is (especially for those newer to using git) to remove LFS tracking. Basically, LFS
-  seems like an option for websites including large data files or binary files on the BACKEND. Not for photos/videos on
-  the FRONTEND which will load slowly/break/disrupt UX.
-  - benefits of vimeo:
-  - https://vimeo.com/upgrade</p>
-
+  <div class="blog-content">
+    <div class="blog-article">
+      <h2 class="section-title">Artists Have Unique Video Hosting Needs</h2>
+      <p>Many artists use websites like Cargo to create their portfolio websites. Cargo is a great option, but some flexibility
+      of design is lost when working from their templates. Ability to enter the code inside a template is limited as not all
+      code is visible to the user. I actually started designing and uploading content for my portfolio site with the free
+      version of Cargo (i.e., not yet public), but I immediately started tweaking the code to make the site design suit my
+      content better, and I soon ran into a couple of walls when I couldn’t make certain changes to the code. Some code was
+      visible upon inspecting dom elements in the browser, but not in Cargo’s code editor itself. This lack of code
+      transparency is to be expected with a proprietary website builder, though, and even though Cargo’s templates are really
+      beautiful, I decided I would be happiest in the long run by building from scratch, since I already had HTML and CSS
+      knowledge.</p>
+      <br>
+      <p>If you are another artist who may know some basics of front-end coding and would like total control over the look and
+      function of their site, it could be a fun challenge to build your site from scratch, and I am aiming this article at
+      you. But for video artists especially, and to some degree artists creating static images, the question of how to host
+      their art can be confusing. For the sake of discussing what I know best, I will focus this article on video hosting (but
+      not live video feeds).</p>
+      <br>
+      <p>There are many options, from hosting it yourself (using HTML’s video tag), to using remote hosts like Youtube or
+      Vimeo. You can possibly even “cheat” in some cases and use a gif (showing highlights of a video) instead of a video
+      (talk about zhestkov’s site). Videos may take time to load to full resolution, so it may be a good idea to limit
+      videos on a landing page, and do what Zhestkov did, providing gif links to another page with videos. It seems to make
+      sense to try to get your landing page to load fastest as it forms the first impression of your site for viewers.</p>
+      <br>
+      <p>When I first started coding, I used the HTML video tag to feature a video on the landing page of my as yet unpublished
+      website. Why? I knew from past experience that Youtube mangled my art videos’ quality, so I thought I
+      could preserve the original fidelity (no nasty compression! Woo!!!). I had also briefly tried using Vimeo to upload
+      the video, but I found that I couldn’t alter the appearance of playback controls, logos, etc. overlaid onto the
+      video with my Vimeo free account. So I went with the video tag to get that sweet minimalist interface going on my
+      site. However, after consulting with a knowledgeable friend, I had severe doubts and then did some reading about
+      how video bitrate and resolution impact loading speed and website domain hosts limit your bandwidth. So suddenly I
+      was delving into remote hosting solutions.</p>
+      <br>
+      <p>First, I must admit that I will always try to find a free way to do something first. Yes, I am thrifty. But
+      through reading about remote hosting platforms, I recognized that if I want a good-looking and functional video
+      interface on my site, I would need to pay for a service. The question now was which one.</p>
+      <br>
+      <p>I must first in all transparency and mild chagrin admit that at this point I had a bit of a tussle with Git’s LFS,
+      or Large File Storage. Unless you are planning to track your site’s different versions with Git, feel free to skip
+      this paragraph, as my foray into LFS was simply a misadventure caused by not understanding that Git, a version
+      control system, has file storage limits and I totally tried to push over 1GB(?) (it was just one video…) of file
+      changes to my remote repository at Github. Yeah, you can’t do that. When my push to remote was refused, I very
+      helpfully received a command line message from Git recommending the use of its LFS. Guys. I trusted Git. I trusted
+      Git with my naive programmer brain. One look at the LFS website made it seem like a no-brainer, so I immediately
+      started tracking my remote repo with LFS, which essentially doesn’t push your large files to the repo, just pushes
+      pointers to the files which are actually stored (backed up) in LFS. But then it sadly dawned on me that having
+      gotten so caught up in wanting to push my recent commits (changes in my code) to the backup, that I totally forgot
+      that this in no way addresses the real issue at hand, namely that my video content was too huge for my site to
+      operate decently. Impulsiveness had won again. So I decided to repent and absolve myself of the video tag of
+      shame, and removed all evidence of .mp4s from my code base. With a sense of I tried pushing the current snapshot
+      to my remote repo, but I got stuck in LFS limbo. It turns out that tracking with LFS is IRREVERSIBLE (I did not
+      see that mentioned on their website…) and you have to do some wonky stuff with your Git tracking to be rid of
+      it, stuff that again filled me with shame and a sense of incompetence. I was Atreyu in the Neverending Story,
+      and my horse had just sunk into the Swamps of Sadness. However, after the curse of LFS had finally been removed
+      through dishonorable means, I was once again on the road to meeting the Empress…I mean, getting my website
+      online.</p>
+      <br>
+      <p>In short, you really shouldn’t be using Git LFS just because you have videos on your site. While LFS is I’m sure
+      a good service if you have large data or binary files, I feel like a sidebar on their website, saying “Hey
+      dummy! When we said large file storage, we meant for machine learning, not art!” would not be remiss. But I
+      digress.</p>
+      <br>
+      <p>Just use Vimeo.</p>
+      <br>
+      <p>Why Vimeo? Youtube is free, and everyone uses it! Wellllll akshuallyyyyyy….</p>
+      <br>
+    </div>
+  <div class="blog-article-titles">
+    <h3 id="blog-titles-heading">Blog articles</h3>
+    <ul>
+      <li><a href="#">Artists Have Unique Video Hosting Needs</a></li>
+    </ul>
+  </div>
+</div>
   <h3 class="return-link"><a href="../index.html">Return Home</a></h3>
 </div>
