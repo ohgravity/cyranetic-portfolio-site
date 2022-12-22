@@ -18,69 +18,69 @@
       <small>December 22, 2022</small>
       <br>
       <br>
-      <p>Many artists use websites like Cargo to create their portfolio websites. Cargo is a great option, but some flexibility
-      of design is lost when working from their templates. Ability to enter the code inside a template is limited as not all
-      code is visible to the user. I actually started designing and uploading content for my portfolio site with the free
-      version of Cargo (i.e., not yet public), but I immediately started tweaking the code to make the site design suit my
-      content better, and I soon ran into a couple of walls when I couldn’t make certain changes to the code. Some code was
-      visible upon inspecting dom elements in the browser, but not in Cargo’s code editor itself. This lack of code
-      transparency is to be expected with a proprietary website builder, though, and even though Cargo’s templates are really
-      beautiful, I decided I would be happiest in the long run by building from scratch, since I already had HTML and CSS
-      knowledge.</p>
+      <p>Many artists use website builders such as <a href="cargo.site">Cargo</a> (targeted toward designers and artists),
+        to create their portfolio websites. While Cargo does have beautiful design templates, some flexibility of design is lost, as not all code/markup is visible/editable for the user. In all fairness, of course a website builder isn't going to give away all their code. But after experiencing these limitations myself while attempting to make a Cargo site, I decided I would be
+        happiest in the long run by building from scratch, since I already had HTML and CSS knowledge. If you are an
+        artist who knows some basics of front-end coding and would like total control over the look and function of your
+        site, it could be a fun challenge to build your site without templates, and I am aiming this article toward you. But for video
+        artists especially, and to some degree artists creating static images, the question of how to efficiently host artwork in a gallery configuration can be
+        confusing. For most people sharing videos online, the main concerns are ease of use and speedy loading (not video quality as much), and so for most of my online search about video hosting for artists, I was inundated with advice meant for marketers whose main concern is SEO. I recognized that there may be interest from other artists about what is best for us, so I decided to write this article. For the sake of discussing what I know best (though I always welcome any corrections if I make mistakes), I will discuss video hosting and not image hosting. I will prioritize user experience and technical frugality for artists and their audiences. I will not discuss SEO as that is a whole
+        other topic that deserves its own article.</p>
       <br>
-      <p>If you are another artist who may know some basics of front-end coding and would like total control over the look and
-      function of their site, it could be a fun challenge to build your site from scratch, and I am aiming this article at
-      you. But for video artists especially, and to some degree artists creating static images, the question of how to host
-      their art can be confusing. For the sake of discussing what I know best, I will focus this article on video hosting (but
-      not live video feeds).</p>
+      <p>Firstly, there are many options in general for video hosting, from hosting it yourself (using HTML’s video embed element), to using remote hosts such as Youtube or
+          Vimeo (<a href="https://www.techradar.com/best/video-hosting">or several others</a>). While there are other video hosting platforms available,
+          I will focus on the two that are most popular, Youtube and Vimeo. </p>
       <br>
-      <p>There are many options, from hosting it yourself (using HTML’s video tag), to using remote hosts like Youtube or
-      Vimeo. You can possibly even “cheat” in some cases and use a gif (showing highlights of a video) instead of a video
-      (talk about zhestkov’s site). Videos may take time to load to full resolution, so it may be a good idea to limit
-      videos on a landing page, and do what Zhestkov did, providing gif links to another page with videos. It seems to make
-      sense to try to get your landing page to load fastest as it forms the first impression of your site for viewers.</p>
+      <p>When I first started coding this site, I used the HTML video tag to feature the video on the homepage. Why? My video artwork tends to have many fine details and high-speed transformations, requiring a high <a href="https://en.wikipedia.org/wiki/Bit_rate">bitrate</a> (number of bits that are conveyed or processed per unit of time) to look nice. I knew from past experience that Youtube mangled my videos’ quality (Youtube has a lower bitrate than Vimeo when encoding, so uses more compression to make file sizes smaller), so I thought I
+        could preserve the original fidelity by self-hosting, and escape all the detail-destroying video compression Youtube uses in order to handle its millions of videos. I had also briefly tried using Vimeo to upload
+        the video, but I found that I couldn’t alter the appearance of playback controls, logos, etc. overlaid onto the
+        video, with my free account. So I went with the HTML video tag to get the more minimal interface I wanted.</p>
+        <br>
+        <p>However, after consulting with a knowledgeable friend, I had severe doubts and then did some reading about
+        how video bitrate and resolution impact loading speed, and how website domain hosts limit bandwidth. I also realized that if I want to use version control (Git) on my site, I need to keep the site lightweight in terms of file sizes. (I don't want to go into detail, because it was a dumb rookie mistake, but do not even think about self-hosting large video files yourself and using Git LFS to store them for version control. Just don't even). So yes, version control must be taken into account. I must confess that I will always try to find a free way to do something first, and sometimes that leads me down some convoluted processes.
+        In this case, it ended in defeat but with valuable lessons learned. If you just want to self-host a few shorter videos, that could be fine, but limit them to 10 seconds each and reduce the
+        filesize with <a href="https://handbrake.fr/">Handbrake</a> first. Also, consider including different video encodings in your
+        code to work with different browsers, as explained in great detail <a
+          href="https://marekslipek.de/workshop/videokompression/index.html">here</a> (translate to English if needed). Anyway, after reading about some video hosting platforms, I recognized that, for my video needs, if I want a good-looking and functional video interface on
+        my site, I would need to pay for a service. The question now was which one to choose.</p>
+        <br>
+      <p>The need to strike a balance between video quality and loading speed/playback performance is an artist's number one concern,
+        and it is possible to agonize in many different ways in the quest for the best performance. To go completely down this
+        rabbit hole requires a great deal of time and patience and probably isn't necessary for people running relatively small sites, so I will try to put forth only
+        straightforward, easily actionable solutions. For one, you can possibly “cheat” in some cases <a href="https://zhestkov.studio/">like this gorgeous example</a> by using a gif
+        gallery (instead of video) on a homepage that when clicked takes you to
+        another page containing just one full video. Videos take time to load to
+        their full resolution, so it may be a good idea to limit or omit videos on a homepage. It makes sense to try to get
+        your homepage to load fastest as it
+        forms the first impression of your site for viewers, and yes, this affects your google search result rank.</p>
       <br>
-      <p>When I first started coding, I used the HTML video tag to feature a video on the landing page of my as yet unpublished
-      website. Why? I knew from past experience that Youtube mangled my art videos’ quality, so I thought I
-      could preserve the original fidelity (no nasty compression! Woo!!!). I had also briefly tried using Vimeo to upload
-      the video, but I found that I couldn’t alter the appearance of playback controls, logos, etc. overlaid onto the
-      video with my Vimeo free account. So I went with the video tag to get that sweet minimalist interface going on my
-      site. However, after consulting with a knowledgeable friend, I had severe doubts and then did some reading about
-      how video bitrate and resolution impact loading speed and website domain hosts limit your bandwidth. So suddenly I
-      was delving into remote hosting solutions.</p>
+      <p>As to which host I would choose between Youtube and Vimeo, the answer is clearly Vimeo.</p>
       <br>
-      <p>First, I must admit that I will always try to find a free way to do something first. Yes, I am thrifty. But
-      through reading about remote hosting platforms, I recognized that if I want a good-looking and functional video
-      interface on my site, I would need to pay for a service. The question now was which one.</p>
+      <p>Why Vimeo? <a href="https://www.azonetwork.com/marketing-science/blog/vimeo-vs-youtube-which-platform-is-best-for-hosting-video-content">Here</a> is a good overview comparison between
+        Youtube and Vimeo
+        (focused
+        more towards marketers but still a well-detailed overall comparison). Because Vimeo has no ads and an array of privacy
+        and embedding control options, as well as a higher bit rate to reduce the need for compression and to maintain crisp
+        visual and audio quality, I recommend using Vimeo (keep in mind the free plan does not offer all these). One very valuable benefit to using Vimeo is that you can
+        re-upload a video without being penalized by losing the url and video-related comments and stats. So if you
+        post a video, but later find a way to optimize the quality, or even decide to make slight edits in the content, you can do that without losing any stats from the time of first posting. That's huge! Not to mention the fact that you can restrict video embedding to happening only on your
+        own personal website, and add your own personal branding, making it harder for people to falsely claim your art as
+        theirs. There are even “Review Tools”, helpful for sharing a private (password-protected) work-in-process video with a
+        client or collaborator to get notes.</p>
       <br>
-      <p>I must first in all transparency and mild chagrin admit that at this point I had a bit of a tussle with Git’s LFS,
-      or Large File Storage. Unless you are planning to track your site’s different versions with Git, feel free to skip
-      this paragraph, as my foray into LFS was simply a misadventure caused by not understanding that Git, a version
-      control system, has file storage limits and I totally tried to push over 1GB(?) (it was just one video…) of file
-      changes to my remote repository at Github. Yeah, you can’t do that. When my push to remote was refused, I very
-      helpfully received a command line message from Git recommending the use of its LFS. Guys. I trusted Git. I trusted
-      Git with my naive programmer brain. One look at the LFS website made it seem like a no-brainer, so I immediately
-      started tracking my remote repo with LFS, which essentially doesn’t push your large files to the repo, just pushes
-      pointers to the files which are actually stored (backed up) in LFS. But then it sadly dawned on me that having
-      gotten so caught up in wanting to push my recent commits (changes in my code) to the backup, that I totally forgot
-      that this in no way addresses the real issue at hand, namely that my video content was too huge for my site to
-      operate decently. Impulsiveness had won again. So I decided to repent and absolve myself of the video tag of
-      shame, and removed all evidence of .mp4s from my code base. With a sense of I tried pushing the current snapshot
-      to my remote repo, but I got stuck in LFS limbo. It turns out that tracking with LFS is IRREVERSIBLE (I did not
-      see that mentioned on their website…) and you have to do some wonky stuff with your Git tracking to be rid of
-      it, stuff that again filled me with shame and a sense of incompetence. I was Atreyu in the Neverending Story,
-      and my horse had just sunk into the Swamps of Sadness. However, after the curse of LFS had finally been removed
-      through dishonorable means, I was once again on the road to meeting the Empress…I mean, getting my website
-      online.</p>
+      
+      <p>I bought the lowest-tier paid hosting plan, which is perfect for an individual not running a large online operation, and am happy so far.
+        In all fairness, though, there are a couple of drawbacks with Vimeo. For one, it will not fare as well in google search
+        results as Youtube videos, as Youtube is owned by Google. For another, the cost is higher. For me, ~100USD/year is
+        manageable to pay for excellent video hosting. However, if I were struggling financially, this cost
+        could be outside of my reach. I truly wish that the best tech services were affordable to all, but that is
+        unfortunately not the case. While I wanted to recommend the best-performing tech solutions with this article, I do not
+        hesitate to say that if Youtube is your best option due to cost, use it! You can still make some edits to customize
+        the interface, and it is still the best-performing video hosting service with regard to overall exposure, <em>and</em> you can
+        monetize your videos. So if you can’t use Vimeo for any reason, don’t let that stop you from making the most beautiful
+        website you can for your art. Your art deserves to be seen.</p>
       <br>
-      <p>In short, you really shouldn’t be using Git LFS just because you have videos on your site. While LFS is I’m sure
-      a good service if you have large data or binary files, I feel like a sidebar on their website, saying “Hey
-      dummy! When we said large file storage, we meant for machine learning, not art!” would not be remiss. But I
-      digress.</p>
-      <br>
-      <p>Just use Vimeo.</p>
-      <br>
-      <p>Why Vimeo? Youtube is free, and everyone uses it! Wellllll akshuallyyyyyy….</p>
+      <p>Many thanks to the friends who helped me with finding info for this article, you know who you are.</p>
       <br>
     </div>
   <div class="blog-article-titles">
