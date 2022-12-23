@@ -90,16 +90,27 @@ h2 a, li a {
 }
 
 .blog-article {
-  width: 60%;
+  width: 70%;
+  line-height: 2em;
 }
 
 .blog-article-titles {
-  width: 30%;
+  width: 20%;
   text-align: right;
 }
 
 #blog-titles-heading {
   padding-bottom: 30px;
+}
+
+.blog-images {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container small {
 }
 
 ul {
