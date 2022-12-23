@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="../css/styles.css">
+<script src="https://kit.fontawesome.com/5c63c5e45f.js" crossorigin="anonymous"></script>
+
 
 <div class="header-container" id="contact-header">
   <img src="../images/cyra-logo-33mb-clear-bg.gif" style="height: 50px; padding-right: 10px" alt="Cyranetic logo">
@@ -12,13 +14,23 @@
     <h2 id="contact"><a href="./contact.html">Contact</a></h2>
   </div>
 </div>
+
 <div class="page-content">
 <h2 class="section-title">Contact Me</h2>
 <form action="https://formsubmit.co/cyranetic@proton.me" method="POST">
   <input type="hidden" name="_subject" value="Email for Cyra">
-  <input type="email" name="email" placeholder="Email Address" required>
+    <div class="item">
+      <label for="email">EMAIL</label>
+      <input type="email" name="email" placeholder="Email address" required>
+    </div>
   <input type="hidden" name="_next" value="https://cyranetic.github.io/cyranetic-portfolio-site/pages/thankyou.html">
-  <input type="text" name="message" placeholder="your message here" required>
-  <button type="submit">Send</button>
+  <div class="full">
+    <label for="message">MESSAGE</label>
+    <input type="text" name="message" placeholder="Your message here" required>
+  </div>
+  <div class="action">
+    <input type="submit" value="SEND MESSAGE">
+    <input type="reset" value="RESET">
+  </div>
 </form>
 </div>
