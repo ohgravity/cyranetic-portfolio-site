@@ -94,6 +94,10 @@ h2 a, li a {
   line-height: 2em;
 }
 
+.blog-article h3 {
+  font-size: 26px;
+}
+
 .blog-article-titles {
   width: 20%;
   text-align: right;
@@ -108,9 +112,6 @@ h2 a, li a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.image-container small {
 }
 
 ul {

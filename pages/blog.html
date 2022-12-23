@@ -13,13 +13,14 @@
 </div>
 <div class="page-content">
   <div class="blog-content">
-    <div class="blog-article">
+    <section class="blog-article">
       <h2 class="section-title">Artists Have Unique Video Hosting Needs</h2>
       <small>December 22, 2022</small>
       <div class="image-container">
         <img class="blog-images" src="../images/code-palette.png" alt="code in shape of palette and paintbrush">
         <small>Image: Cyranetic</small>
       </div>
+      <br>
       <p>Many artists use website builders such as <a href="cargo.site">Cargo</a> (targeted toward designers and artists),
         to create their portfolio websites. While Cargo does have beautiful design templates, some flexibility of design is lost, as not all code/markup is visible/editable for the user. In all fairness, of course a website builder isn't going to give away all their code. But after experiencing these limitations myself while attempting to make a Cargo site, I decided I would be
         happiest in the long run by building from scratch, since I already had HTML and CSS knowledge. If you are an
@@ -31,11 +32,17 @@
         <p>For most people sharing videos online, the main concerns are ease of use and speedy loading (not video quality as much), and so for most of my online search about video hosting for artists, I was inundated with advice meant for marketers whose main concern is SEO. I recognized that there may be interest from other artists about what is best for us, so I decided to write this article. For the sake of discussing what I know best (though I always welcome any corrections if I make mistakes), I will discuss video hosting and not image hosting. I will prioritize user experience and technical frugality for artists and their audiences. I will not discuss SEO as that is a whole
         other topic that deserves its own article.</p>
       <br>
+      <h3>Options</h3>
+      <br>
       <p>Firstly, there are many options in general for video hosting, from hosting it yourself (using HTML’s video embed element), to using remote hosts such as Youtube or
           Vimeo (<a href="https://www.techradar.com/best/video-hosting">or several others</a>). While there are other video hosting platforms available,
           I will focus on the two that are most popular, Youtube and Vimeo. </p>
       <br>
-      <p>When I first started coding this site, I used the HTML video tag to feature the video on the homepage. Why? My video artwork tends to have many fine details and high-speed transformations, requiring a high <a href="https://en.wikipedia.org/wiki/Bit_rate">bitrate</a> (number of bits that are conveyed or processed per unit of time) to look nice. I knew from past experience that Youtube mangled my videos’ quality (Youtube has a lower bitrate than Vimeo when encoding, so uses more compression to make file sizes smaller), so I thought I
+      <h3>HTML's Video Embed Element</h3>
+      <div class="image-container">
+        <img class="blog-images" style="width:60%" src="../images/video-tag.png" alt="image of html video tag">
+      </div>
+      <p>When I first started coding this site, I used the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">HTML video tag</a> to feature the video on the homepage. Why? My video artwork tends to have many fine details and high-speed transformations, requiring a high <a href="https://en.wikipedia.org/wiki/Bit_rate">bitrate</a> (number of bits that are conveyed or processed per unit of time) to look nice. I knew from past experience that Youtube mangled my videos’ quality (Youtube has a lower bitrate than Vimeo when encoding, so uses more compression to make file sizes smaller), so I thought I
         could preserve the original fidelity by self-hosting, and escape all the detail-destroying video compression Youtube uses in order to handle its millions of videos. I had also briefly tried using Vimeo to upload
         the video, but I found that I couldn’t alter the appearance of playback controls, logos, etc. overlaid onto the
         video, with my free account. So I went with the HTML video tag to get the more minimal interface I wanted.</p>
@@ -48,6 +55,10 @@
           href="https://marekslipek.de/workshop/videokompression/index.html">here</a> (translate to English if needed). Anyway, after reading about some video hosting platforms, I recognized that, for my video needs, if I want a good-looking and functional video interface on
         my site, I would need to pay for a service. The question now was which one to choose.</p>
         <br>
+        <h3>Youtube or Vimeo?</h3>
+        <div class="image-container">
+          <img class="blog-images" src="../images/youtube-vs-vimeo.png" alt="youtube logo, question mark, vimeo logo">
+        </div>
       <p>The need to strike a balance between video quality and loading speed/playback performance is an artist's number one concern,
         and it is possible to agonize in many different ways in the quest for the best performance. To go completely down this
         rabbit hole requires a great deal of time and patience and probably isn't necessary for people running relatively small sites, so I will try to put forth only
@@ -64,13 +75,15 @@
         Youtube and Vimeo
         (focused
         more towards marketers but still a well-detailed overall comparison). Because Vimeo has no ads and an array of privacy
-        and embedding control options, as well as a higher bit rate to reduce the need for compression and to maintain crisp
+        and embedding control options, as well as a higher bitrate to reduce the need for compression and to maintain crisp
         visual and audio quality, I recommend using Vimeo (keep in mind the free plan does not offer all these). One very valuable benefit to using Vimeo is that you can
         re-upload a video without being penalized by losing the url and video-related comments and stats. So if you
         post a video, but later find a way to optimize the quality, or even decide to make slight edits in the content, you can do that without losing any stats from the time of first posting. That's huge! Not to mention the fact that you can restrict video embedding to happening only on your
         own personal website, and add your own personal branding, making it harder for people to falsely claim your art as
         theirs. There are even “Review Tools”, helpful for sharing a private (password-protected) work-in-process video with a
         client or collaborator to get notes.</p>
+      <br>
+      <h3>Do What's Right For You</h3>
       <br>
       <p>I bought the lowest-tier paid hosting plan, which is perfect for an individual not running a large online operation, and am happy so far.
         In all fairness, though, there are a couple of drawbacks with Vimeo. For one, it will not fare as well in google search
@@ -85,7 +98,7 @@
       <br>
       <p>Many thanks to the friends who helped me with finding info for this article, you know who you are.</p>
       <br>
-    </div>
+    </section>
   <div class="blog-article-titles">
     <h3 id="blog-titles-heading">Blog articles</h3>
     <ul>
