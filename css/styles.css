@@ -25,6 +25,7 @@ body {
   display: flex;
   padding: 20px 100px;
   align-items: center;
+  width: 100vw;
 }
 
 #work-header {
@@ -40,7 +41,10 @@ body {
 }
 
 #contact-header {
+  position: absolute;
+  width: 100%;
   background-color: rgb(208, 208, 208);
+  z-index: 3;
 }
 
 .name {
@@ -144,6 +148,20 @@ ul {
   text-align: left;
 }
 
+#contact-page-content {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  color: white;
+  z-index: 2;
+}
+
+#contact-page-content h2 {
+  margin-top: 4em;
+}
+
 form {
   background: rgba(27, 31, 34, 0.80);
   width: 640px;
@@ -165,6 +183,7 @@ form label {
   font-size: 18px;
   letter-spacing: 3.5px;
   margin-bottom: 16px;
+  color: white;
 }
 
 form .item input {
@@ -216,6 +235,10 @@ form .action input[type="submit"] {
   color: black;
 }
 
+form input[type="reset"] {
+  color: white;
+}
+
 form .icons a {
   border: 1px solid white;
   border-radius: 50%;
@@ -232,3 +255,18 @@ form .action input[type="reset"]:hover,
 form .icons a:hover {
   background: rgba(255, 255, 255, 0.075);
 }
+
+.contact-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contact-page-wrapper {
+  position: relative;
+}
+
