@@ -270,3 +270,6 @@ form .icons a:hover {
   position: relative;
 }
 
+.full input, .item input {
+  color: white;
+}
