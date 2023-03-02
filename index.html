@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,22 +10,27 @@
 </head>
 <body>
   <div class="index-page-container">
-    <div class="header-container">
-      <img src="./images/cyra-logo-33mb-clear-bg.gif" style="height: 50px; padding-right: 10px" alt="Cyranetic logo">
-      <div class="name">
-        
-        <h2><a href="./index.html">Cyranetic</a></h2>
+    <nav>
+      <input type="checkbox" id="check">
+      <div class="logo">
+        <img class="logo-gif" src="./images/cyra-logo-33mb-clear-bg.gif" style="height: 50px; padding-right: 10px" alt="Cyranetic logo">
+        <div class="logo-name">
+          <a href="./index.html">Cyranetic</a>
+        </div>
       </div>
-      <div class="navigation">
-        <h2 id="work"><a href="./pages/work.html">Work</a></h2>
-        <h2 id="about"><a href="./pages/about.html">About</a></h2>
-        <h2 id="blog"><a href="./pages/blog.html">Blog</a></h2>
-        <h2 id="contact"><a href="./pages/contact.html">Contact</a></h2>
-      </div>
-    </div>
+      <ul class="nav-ul">
+        <li id="work"><a href="./pages/work.html">Work</a></h2>
+        <li id="about"><a href="./pages/about.html">About</a></h2>
+        <li id="blog"><a href="./pages/blog.html">Blog</a></h2>
+        <li id="contact"><a href="./pages/contact.html">Contact</a></h2>
+      </ul>
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
     <div class="cover-img-container">
       <img src="./images/falling-3sec.gif" alt="short video of geometric forms falling away from viewer">
-      </div>
+    </div>
   </div>
 </body>
 </html>
