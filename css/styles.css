@@ -207,6 +207,15 @@ ul {
   text-align: left;
 }
 
+.contact-page-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.contact-page-wrapper nav {
+  z-index: 4;
+}
+
 #contact-page-content {
   position: absolute;
   width: 100%;
@@ -219,6 +228,21 @@ ul {
 
 #contact-page-content h2 {
   margin-top: 4em;
+}
+
+.contact-img-container {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contact-img-container img {
+  height: 100vh;
+  object-fit: cover;
 }
 
 form {
@@ -315,21 +339,6 @@ form .icons a:hover {
   background: rgba(255, 255, 255, 0.075);
 }
 
-.contact-img-container {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.contact-page-wrapper {
-  position: relative;
-  display: flex;
-}
-
 .full input, .item input {
   color: white;
 }
@@ -423,8 +432,13 @@ form .icons a:hover {
   }
 
   nav {
-    padding-right: 0;
-    z-index: 1;
+    padding-right: auto;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    background-color: white;
   }
 
   ul {
@@ -457,7 +471,4 @@ form .icons a:hover {
   #check:checked ~ ul {
     left: 0;
   }
-
-  
-  
 }
