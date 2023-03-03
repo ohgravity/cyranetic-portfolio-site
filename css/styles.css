@@ -218,12 +218,13 @@ ul {
 
 #contact-page-content {
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
   top: 0px;
   left: 0px;
   height: 100vh;
   color: white;
   z-index: 2;
+  margin-bottom: 4em;
 }
 
 #contact-page-content h2 {
@@ -241,6 +242,7 @@ ul {
 }
 
 .contact-img-container img {
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
 }
