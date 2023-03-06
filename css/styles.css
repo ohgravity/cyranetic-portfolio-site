@@ -206,6 +206,7 @@ ul {
 #about-content {
   width: 80%;
   text-align: left;
+  margin-left: 50px;
 }
 
 .contact-page-wrapper {
@@ -370,23 +371,6 @@ form .icons a:hover {
     margin: 50px 50px;
   }
 
-  #about-container {
-      display: flex;
-      flex-direction: column;
-      margin-top: 30px;
-    }
-  
-  #about-container img {
-    width: 30%;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  #about-content {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 50px;
-  }
 }
 
 @media (max-width: 1150px) {
@@ -422,6 +406,24 @@ form .icons a:hover {
     margin: 50px 50px;
   }
 
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  #about-container img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  #about-content {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 858px) {
