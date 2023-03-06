@@ -200,6 +200,7 @@ ul {
 #about-container img {
   min-width: 180px;
   max-width: 180px;
+  align-self: flex-start;
 }
 
 #about-content {
