@@ -257,7 +257,13 @@ ul {
   z-index: 1;
 }
 
-.contact-img-container img {
+/* .contact-img-container img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+} */
+
+.contact-img-container video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
