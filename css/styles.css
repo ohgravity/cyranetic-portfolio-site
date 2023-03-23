@@ -22,6 +22,9 @@ body {
 .index-page-container {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -31,14 +34,17 @@ nav {
   width: 100%;
   font-weight: bold;
   background-color: white;
+  z-index: 4;
 }
 
 .cover-img-container {
-  display: flex;
-  overflow: hidden;
-  width: inherit;
-  height: inherit;
-  position: relative;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* .cover-img-container img {
@@ -52,41 +58,31 @@ nav {
 .cover-img-container video {
   max-width: inherit;
   max-height: inherit;
-  height: inherit;
-  width: inherit;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-}
-
-#work-header {
-  background-color: rgb(208, 208, 208);
-}
-
-#about-header {
-  background-color: rgb(208, 208, 208);
-}
-
-#blog-header {
-  background-color: rgb(208, 208, 208);
-}
-
-#contact-header {
-  position: absolute;
-  width: 100%;
-  background-color: rgb(208, 208, 208);
-  z-index: 3;
+  z-index: 1;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  text-align: center;
   margin: 0;
   padding: 0 100px 0 0;
   height: 35px;
 }
 
+.logo-gif {
+  height: 40px; 
+  padding-right: 10px;
+}
+
 .logo-name {
-  flex: 2 1 auto;
+  /* flex: 2 1 auto; */
+  display: flex;
   font-size: 30px;
+  align-content: center;
   /* margin-right: auto; */
 }
 
@@ -97,9 +93,8 @@ nav {
 
 nav ul {
   float: right;
-  margin-right: 20px;
   margin-left: auto;
-  /* justify-content: space-between; */
+  list-style: none;
 }
 
 nav ul li {
@@ -112,7 +107,7 @@ nav ul li {
   list-style: none;
 }
 
-.checkbtn {
+/* .checkbtn {
   font-size: 30px;
   float: right;
   line-height: 40px;
@@ -123,11 +118,7 @@ nav ul li {
 
 #check {
   display: none;
-}
-
-h1 {
-  font-size: 40px;
-}
+} */
 
 h2 {
   font-size: 30px;
@@ -142,12 +133,9 @@ p, ul {
 }
 
 h2 a, li a {
+  list-style: none;
   text-decoration: none;
   color: black;
-}
-
-#work, #about, #contact, #blog {
-  margin: 0 10px;
 }
 
 .page-content {
@@ -174,6 +162,10 @@ h2 a, li a {
   text-align: right;
 }
 
+.blog-article-titles ul li {
+  list-style: none;
+}
+
 #blog-titles-heading {
   padding-bottom: 30px;
 }
@@ -183,10 +175,6 @@ h2 a, li a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-ul {
-  list-style: none;
 }
 
 .section-title {
@@ -228,10 +216,6 @@ ul {
   display: flex;
 }
 
-.contact-page-wrapper nav {
-  z-index: 4;
-}
-
 #contact-page-content {
   position: absolute;
   /* width: 100%; */
@@ -256,12 +240,6 @@ ul {
   left: 0;
   z-index: 1;
 }
-
-/* .contact-img-container img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-} */
 
 .contact-img-container video {
   width: 100vw;
@@ -375,13 +353,12 @@ form .icons a:hover {
     width: 100%;
     font-weight: bold;
     background-color: white;
+    z-index: 4;
   }
 
   nav ul li {
-    display: inline-block;
     line-height: 40px;
     margin: 0 5px;
-    padding-left: 50px;
     font-size: 30px;
     text-decoration: none;
     list-style: none;
@@ -406,20 +383,68 @@ form .icons a:hover {
 
 @media (max-width: 952px) {
   nav {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    background-color: white;
+    z-index: 4;
   }
 
   .logo {
-    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    font-size: 20px;
   }
 
-  nav ul li {
-    padding-left: 0;
+  .page-content {
+    margin: 50px 50px;
   }
 
-  nav ul li a {
-    font-size: 24px;
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  #about-container img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  #about-content {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 920px) {
+  nav {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    background-color: white;
+    z-index: 4;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    font-size: 20px;
   }
 
   .page-content {
@@ -447,53 +472,125 @@ form .icons a:hover {
 }
 
 @media (max-width: 858px) {
-  .checkbtn {
-    display: block;
-  }
-
-  .logo {
-    margin-left: 0;
-    margin-right: auto;
-  }
 
   nav {
-    padding-right: auto;
-    z-index: 3;
     display: flex;
+    padding: 10px 10px;
     align-items: center;
     width: 100%;
     font-weight: bold;
     background-color: white;
+    z-index: 4;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .logo-gif {
+    height: 40px;
+    padding-right: 10px;
+  }
+
+  .logo-name a {
+    font-size: 25px;
   }
 
   ul {
-    position: fixed;
+    /* position: fixed; */
+    float: right;
+    margin-left: auto;
     width: 100%;
-    height: 100vh;
-    top: 80px;
-    left: -100%;
-    padding-top: 20px;
-    text-align: center;
+    text-align: right;
     z-index: 3;
-    background-color: grey;;
   }
 
   nav ul li {
-    display: block;
-    padding-left: 0;
-    margin: 50px 0;
-    line-height: 50px;
+    flex: 1;
+    line-height: 40px;
+    margin: 0 5px;
+    font-size: 15px;
+    text-decoration: none;
+    list-style: none;
   }
 
   nav ul li a {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .cover-img-container {
     z-index: 1;
   }
 
-  #check:checked ~ ul {
+  /* #check:checked ~ ul {
     left: 0;
+  } */
+}
+
+@media (max-width: 700px) {
+
+  nav {
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    background-color: white;
+    z-index: 4;
   }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .logo-gif {
+    height: 25px;
+    padding-right: 5px;
+  }
+
+  .logo-name a {
+    font-size: 15px;
+  }
+
+  ul {
+    /* position: fixed; */
+    float: right;
+    margin-left: auto;
+    width: 100%;
+    text-align: right;
+    z-index: 3;
+  }
+
+  nav ul li {
+    flex: 1;
+    line-height: 40px;
+    margin: 0;
+    font-size: 15px;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  nav ul li a {
+    font-size: 10px;
+  }
+
+  .cover-img-container {
+    z-index: 1;
+  }
+
+  /* #check:checked ~ ul {
+    left: 0;
+  } */
 }
