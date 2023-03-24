@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'Drexs', Helvetica, sans-serif;
+  src: url('../Drexs-z8gB3.ttf');
+}
+
 html {
   box-sizing: border-box;
-  font-family: Helvetica, Verdana, sans-serif;
+  font-family: 'Drexs';
   width: 100vw;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
@@ -109,19 +114,6 @@ nav ul li {
   list-style: none;
 }
 
-/* .checkbtn {
-  font-size: 30px;
-  float: right;
-  line-height: 40px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
-} */
-
 h2 {
   font-size: 30px;
 }
@@ -130,8 +122,16 @@ h3 {
   font-size: 20px;
 }
 
-p, ul {
+p {
   font-size: 20px;
+}
+
+ul {
+  font-size: 20px;
+}
+
+.page-content p {
+  font-family: calibri;
 }
 
 h2 a, li a {
@@ -381,6 +381,10 @@ form .icons a:hover {
     margin: 50px 50px;
   }
 
+  #about-content p {
+    font-size: 35px;
+  }
+
   #contact-page-content {
     width: 80%;
   }
@@ -399,7 +403,7 @@ form .icons a:hover {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
   }
-  
+
   form label {
     display: block;
     font-size: 14px;
@@ -435,7 +439,7 @@ form .icons a:hover {
   nav ul li {
     padding-left: 0;
   }
-  
+
 }
 
 @media (max-width: 952px) {
@@ -626,7 +630,6 @@ form .icons a:hover {
   }
 
   ul {
-    /* position: fixed; */
     float: right;
     margin-left: auto;
     width: 100%;
@@ -651,4 +654,7 @@ form .icons a:hover {
     z-index: 1;
   }
 
+  .blog-article-titles {
+    display: none;
+  }  
 }
