@@ -2,6 +2,8 @@ html {
   box-sizing: border-box;
   font-family: Helvetica, Verdana, sans-serif;
   width: 100vw;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 *,
@@ -229,6 +231,8 @@ h2 a, li a {
 
 #contact-page-content h2 {
   margin-top: 4em;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 .contact-img-container {
@@ -254,6 +258,8 @@ form {
   max-width: 97%;
   border-radius: 4px;
   padding: 55px 30px;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 form .item {
@@ -269,6 +275,8 @@ form label {
   letter-spacing: 3.5px;
   margin-bottom: 16px;
   color: white;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 form .item input, textarea {
@@ -276,7 +284,7 @@ form .item input, textarea {
   border: 1px solid white;
   outline: 0;
   padding: 16px;
-  width: 100%;
+  width: 200%;
   height: 44px;
   background: transparent;
   font-size: 17px;
@@ -374,7 +382,11 @@ form .icons a:hover {
   }
 
   #contact-page-content {
-    width: 90%;
+    width: 80%;
+  }
+
+  #content-page-content h2 {
+    margin-top: 0;
   }
 
   form {
@@ -384,6 +396,33 @@ form .icons a:hover {
     max-width: 97%;
     border-radius: 4px;
     padding: 55px 30px;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+  
+  form label {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+    color: white;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  form .action input {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-right: 10px;
+    margin-bottom: 30px;
   }
 
 }
@@ -552,6 +591,10 @@ form .icons a:hover {
 }
 
 @media (max-width: 700px) {
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
 
   nav {
     display: flex;
@@ -608,7 +651,4 @@ form .icons a:hover {
     z-index: 1;
   }
 
-  /* #check:checked ~ ul {
-    left: 0;
-  } */
 }
