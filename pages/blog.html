@@ -25,7 +25,7 @@
         <small>Image: Cyranetic</small>
       </div>
       <br>
-      <p>Many artists use website builders such as <a href="https://cargo.site/" target="_blank" rel="noopener noreferrer">Cargo</a> – think Squarespace or Wix but prettier and targeted toward designers and artists – to create their portfolio websites.
+      <p>Many artists use website builders such as <a href="https://cargo.site/" target="_blank" rel="noopener noreferrer">Cargo</a> – if you don't know of it yet, think Squarespace or Wix but prettier and targeted toward designers and artists – to create their portfolio websites.
       One drawback, though, is that some flexibility of design is lost, as not all of the code/markup is visible/editable for
       the user. When I set out to build my portfolio site, I originally started working with a Cargo template, but
       increasingly found myself tweaking the code to better fit my style. I eventually hit a wall where I couldn’t change
@@ -35,14 +35,13 @@
       be clear about who I think might benefit from reading this article, if you are an artist who knows some basics of
       front-end coding and would like total control over the look and function of your site, I am talking to you. If you don’t
       have much experience with HTML and CSS, though, it makes sense to simply use Cargo.</p>
-        <br>
-        <p>I think that video artists have special video hosting needs. For most people sharing videos online, the main concerns
-        are ease of use and speedy loading – not video quality especially – and so for most of my online search about video
-        hosting for artists, I was inundated with advice meant for marketers whose main concern is SEO. I recognized that there
-        may be interest from other artist-coders about what is best for their needs, so I decided to write this article. Before
-        researching this topic, I knew what options were out there, but I didn’t have a good idea of the contrasts between self-
-        and remote- hosting, nor did I understand the critical differences between the different remote video host options out
-        there. If you find yourself in the same situation, read on.</p>
+      <br>
+      <p>I think video artists have special video hosting needs. For most people sharing videos online, video quality isn't the absolute top priority. And so for most of my online search about video
+      hosting for artists, I was inundated with advice meant for marketers whose main concern is SEO. I recognized that there
+      may be interest from other artist-coders about what is best for their needs, so I decided to write this article. Before
+      researching this topic, I knew what options were out there, but I didn’t have a good idea of the contrasts between self-
+      and remote-hosting, nor did I understand the critical differences between the different remote video host options out
+      there. If you find yourself in the same situation, read on.</p>
       <br>
       <h3>Options</h3>
       <br>
@@ -56,7 +55,7 @@
         <img class="blog-images" style="width:50%" src="../images/video-tag.png" alt="image of html video tag">
       </div>
       <p>Before I say anything else, I must point out that my videos, often music videos, tend to be several minutes long, with
-      large file sizes. When I first started coding this site, I used the HTML video tag to feature the video on the homepage.
+      large file sizes. When I first started coding this site, I used the HTML video tag to feature the (entire) video displayed on the homepage.
       Why? My video artwork tends to have many fine details and fast changes, requiring a high <a href="https://en.wikipedia.org/wiki/Bit_rate" target="_blank" rel="noopener noreferrer">bitrate</a> to look nice. Bitrate is essentially the number of bits that are conveyed or processed per unit of time during
       playback. I knew from past experience that Youtube, having a low bitrate and a lot of compression, mangled my videos’
       quality, so I thought I could preserve the original fidelity by self-hosting and escape all the detail-destroying video
@@ -71,11 +70,11 @@
           self-hosting large video files yourself and using Git LFS to store them for version control. Just don't even. I tried that during my problem-solving process, but became really dismayed by the frankly ridiculous rabbit hole that took me down. So yes,
           version control must be taken into account. And I will always try to find a free way to do something
           first, and sometimes that leads me down some convoluted processes (sometimes with success!). In this case, it ended in defeat but with valuable
-          lessons learned. If you just want to self-host a few shorter videos, that could be fine, but limit them to 10 seconds
-          each and reduce the file size with <a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">Handbrake</a> first. Also, consider including different 
+          lessons learned. If you just want to self-host a few shorter videos, that is fine, but limit them to a length of 10 seconds
+          each and reduce the file size with <a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">Handbrake</a> first. I limited my embedded videos to 3 and 4 seconds in this site, on the homepage, and on the contact page. I actually also tried converting these short videos to high-quality gifs, but those actually loaded much more slowly than video files, surprisingly. Another point to consider is including different 
           video encodings in your code to work with different browsers, as explained in great detail <a href="https://marekslipek.de/workshop/videokompression/index.html" target="_blank" rel="noopener noreferrer">here</a> 
-          (translate to English if needed). Anyway, after reading about some video hosting platforms, I recognized that, for my video needs, if I want a
-          good-looking and functional video interface on my site, I would need to pay for a service. The question now was which
+          (translate to English if needed). Anyway, in the case of showing full-length videos of mine, after reading about some video hosting platforms, I recognized that if I want a
+          good-looking and functional video interface for full videos on my site, I would need to pay for a service. The question now was which
           one to choose.
         </p>
         <br>
@@ -88,12 +87,12 @@
       down this rabbit hole requires a great deal of time and patience and probably isn't necessary for people running
       relatively small sites, so I will try to put forth only straightforward, easily actionable solutions. For one, you can
       possibly “cheat” in some cases <a href="https://zhestkov.studio/" target="_blank" rel="noopener noreferrer">like this gorgeous example</a> by using a gif gallery 
-      instead of video on a homepage that, when clicked, takes you to another page containing just one full video. Videos take 
+      instead of video on a homepage that, when clicked, takes you to another page containing just one full video. However, in my case, gifs loaded more slowly than videos of the same length. Videos take 
       time to load to their full resolution, so it may be a good idea to limit or omit videos on a
-      homepage. It makes sense to try to get your homepage to load fastest as it forms the first impression of your site for
-      viewers, and yes, this affects your google search result rank.</p>
+      homepage. In my case, I compromised and just trimmed the video length to 3 seconds. It is worth some real consideration, though, as your homepage forms the first impression of your site for
+      viewers, and yes, this loading speed also affects your google search result rank.</p>
       <br>
-      <p>As to which host I would choose between Youtube and Vimeo, the answer is clearly Vimeo.</p>
+      <p>As to which host I would choose between Youtube and Vimeo for full-length videos, the answer is clearly Vimeo.</p>
       <br>
       <p>Why Vimeo? <a href="https://www.azonetwork.com/marketing-science/blog/vimeo-vs-youtube-which-platform-is-best-for-hosting-video-content" target="_blank" rel="noopener noreferrer">Here</a> is a good overview comparison between Youtube and Vimeo, and although it is focused more towards marketers, it is still
       a well-detailed general comparison. Because Vimeo has no ads and an array of privacy and embedding control options, as
@@ -113,11 +112,9 @@
       in google search results as Youtube videos, as Youtube is owned by Google. For another, the cost is higher. For me,
       ~100USD/year is manageable to pay for excellent video hosting. However, if I were struggling financially, this cost
       could be outside of my reach. I want to recognize that there are talented people out there in the world who have the skills to showcase, but not the money to pay for every optimizing service out there. While I wanted to recommend the best-performing tech solutions with this article, I do not hesitate to say
-      that if Youtube is your best option due to cost, use it! You can still make some edits to customize the interface, and
+      that Youtube is just fine, if you're careful about following their upload guides for best resolution. You can still make some edits to customize the interface, and
       it is still the best-performing video hosting service with regard to overall exposure, and you can monetize your videos if you are trying to get a large audience.
-      So if you can’t use Vimeo for any reason, don’t let that discourage you. At the end of the day, sometimes good art comes in humble packages, and bad art comes in shiny ones.</p>
-      <br>
-      <p>Many thanks to the friends who helped me with finding info for this article, you know who you are.</p>
+      So if you can’t use Vimeo for any reason, don’t let that discourage you. At the end of the day, one's art speaks for itself.</p>
       <br>
     </section>
   <div class="blog-article-titles">
