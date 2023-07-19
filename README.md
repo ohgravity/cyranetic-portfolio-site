@@ -1,7 +1,9 @@
 # Cyranetic
 
-This is my portfolio site for my programming and art projects. I started making it in November, 2022.
+This is my portfolio site for my programming and art projects. I started building it in November, 2022.
 
-Currently, it has most of its content, but I will be changing the design a bit and making it responsive.
+https://cyranetic.github.io/cyranetic-portfolio-site/
+
+It's a work in progress and will be updated as I learn.
 
 Thanks for looking!
