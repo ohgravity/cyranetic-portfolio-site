@@ -6,4 +6,4 @@ https://cyranetic.github.io/cyranetic-portfolio-site/
 
 It's a work in progress and will be updated as I learn.
 
-Thanks for looking! :)
+Thanks for looking!
